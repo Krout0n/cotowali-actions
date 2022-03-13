@@ -1,0 +1,14 @@
+name: "Cotowali"
+description: "A statically typed scripting language that transpile into POSIX sh"
+inputs:
+  path:
+    description: "The cotowali file"
+
+outputs:
+  time: # id of output
+    description: "The time we greeted you"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
